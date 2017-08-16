@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Projeto01.Models
+namespace Modelo.Tabelas
 {
-	public class Fabricante
+	public class Categoria
 	{
-		public long FabricanteId { get; set; }
-
+		public long CategoriaId { get; set; }
 		[Required]
 		public string Nome { get; set; }
 

@@ -1,7 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Projeto01.Models
-{
+namespace Modelo.Cadastros
 	public class Produto
 	{
 		public long? ProdutoId { get; set; }
