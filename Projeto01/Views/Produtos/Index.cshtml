@@ -40,9 +40,9 @@
 							@Html.DisplayFor(modelItem => item.Fabricante.Nome)
 						</td>
 						<td>
-							@Html.ActionLink("Alterar", "Edit", new { id = item.ProdutoId }) |
-							@Html.ActionLink("Detalhes", "Details", new { id = item.ProdutoId }) |
-							@Html.ActionLink("Eliminar", "Delete", new { id = item.ProdutoId })
+							@Html.ActionLink("Alterar", "Edit", new { id = item.ProdutoId }, new { @class = "btn btn-warning btn-xs" }) |
+							@Html.ActionLink("Detalhes", "Details", new { id = item.ProdutoId }, new { @class = "btn btn-info btn-xs" }) |
+							@Html.ActionLink("Eliminar", "Delete", new { id = item.ProdutoId }, new { @class = "btn btn-danger btn-xs" })
 						</td>
 					</tr>
 				}
@@ -63,7 +63,30 @@
 	<script type="text/javascript">
         $(document).ready(function () {
             $('.table').dataTable({
-                "order": [[0, "asc"]]
+                "order": [[1, "asc"]],
+                "language": {
+                    "sEmptyTable": "Nenhum registro encontrado",
+                    "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+                    "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
+                    "sInfoFiltered": "(Filtrados de _MAX_ registros)",
+                    "sInfoPostFix": "",
+                    "sInfoThousands": ".",
+                    "sLengthMenu": "_MENU_ resultados por página",
+                    "sLoadingRecords": "Carregando...",
+                    "sProcessing": "Processando...",
+                    "sZeroRecords": "Nenhum registro encontrado",
+                    "sSearch": "Pesquisar",
+                    "oPaginate": {
+                        "sNext": "Próximo",
+                        "sPrevious": "Anterior",
+                        "sFirst": "Primeiro",
+                        "sLast": "Último"
+                    },
+                    "oAria": {
+                        "sSortAscending": ": Ordenar colunas de forma ascendente",
+                        "sSortDescending": ": Ordenar colunas de forma descendente"
+                    }
+                }
             });
         });
         $(document).ready(function () {
