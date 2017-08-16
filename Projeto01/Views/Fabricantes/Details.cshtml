@@ -31,6 +31,11 @@
 		$(document).ready(function () {
 			$('.li').removeClass("active");
 			$('#liFabricantes').addClass("active");
-		});
+        });
+        $(document).ready(function () {
+            $('.table').dataTable({
+                "order": [[1, "asc"]]
+            });
+        });
 	</script>
 }
